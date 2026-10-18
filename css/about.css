@@ -167,10 +167,47 @@
   justify-content: center;
   color: #64748b;
   font-size: 4rem;
+  position: relative;
+}
+
+.duty-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.duty-active {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+.duty-standby {
+  background: #fef9c3;
+  color: #a16207;
+  border: 1px solid #fde047;
 }
 
 .team-info {
   padding: 24px;
+}
+
+.member-credential {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .team-name {
@@ -193,6 +230,25 @@
   color: var(--text-muted);
   font-size: 0.92rem;
   margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.team-meta {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.meta-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4b5563;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 50px;
 }
 
 @media (max-width: 768px) {
