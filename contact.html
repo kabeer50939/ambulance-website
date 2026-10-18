@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Ambulance Institution</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="brand-wrapper">
+          <img src="images/logo.svg" alt="Ambulance Institution Logo" class="brand-logo-icon">
+          <div class="brand-text">
+            <span class="brand-title">AMBULANCE INSTITUTION</span>
+            <span class="brand-subtitle">Emergency Medical Services</span>
+          </div>
+        </div>
+        <div class="emergency-quick-badge">
+          <span class="pulse-dot"></span>
+          <span>24/7 Hotline: (800) 555-0199</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="nav-wrapper">
+      <div class="container">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="ambulances.html">Ambulances</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact & Emergency Dispatch</h1>
+        <p>Get in touch for non-emergency scheduling, inquiries, or reach our central dispatch immediately.</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> &gt; <span>Contact Us</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Left: Contact / Inquiries Form -->
+          <div class="contact-form-card">
+            <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 8px; color: #111827;">Send Us a Message</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">For scheduled transfers, institutional partnerships, or general queries.</p>
+            
+            <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been received.');">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" class="form-control" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" class="form-control" placeholder="e.g. (555) 000-1234" required>
+              </div>
+
+              <div class="form-group">
+                <label for="service-type">Required Service</label>
+                <select id="service-type" class="form-control">
+                  <option value="emergency">Emergency Response Dispatch</option>
+                  <option value="inter-hospital">Inter-Hospital ICU Transfer</option>
+                  <option value="non-emergency">Non-Emergency Medical Transport</option>
+                  <option value="air">Air Ambulance Inquiry</option>
+                  <option value="event">Event Medical Cover</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message / Details *</label>
+                <textarea id="message" class="form-control" rows="4" placeholder="Provide patient condition, pickup location, or any specific details..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 14px;">
+                Submit Request
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Hotline & Info Panel -->
+          <div class="contact-info-panel">
+            <div class="emergency-hotline-card">
+              <h3>🚨 Life Threatening Emergency?</h3>
+              <p>Do not wait for a form reply. Call our 24/7 Priority Emergency Hotline immediately:</p>
+              <a href="tel:8005550199" class="number" style="color: #ffffff;">(800) 555-0199</a>
+              <small style="opacity: 0.9;">Average response time under 8 minutes across all central zones.</small>
+            </div>
+
+            <div class="info-cards-list">
+              <div class="info-item">
+                <div class="info-item-icon">📍</div>
+                <div class="info-item-content">
+                  <h4>Headquarters & Station 1</h4>
+                  <p>742 Evergreen Healthcare Ave, Medical District, Suite 100</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-item-icon">📧</div>
+                <div class="info-item-content">
+                  <h4>Email Dispatch</h4>
+                  <p>dispatch@ambulanceinstitution.org<br>support@ambulanceinstitution.org</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-item-icon">⏰</div>
+                <div class="info-item-content">
+                  <h4>Operating Hours</h4>
+                  <p>24 Hours a Day / 7 Days a Week / 365 Days a Year</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ambulance Institution. All rights reserved.</p>
+        <p>Built with ❤️ by Group 5 Team</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
