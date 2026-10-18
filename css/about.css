@@ -5,9 +5,72 @@
 
 .about-intro-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: center;
+}
+
+.about-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.about-visual-card {
+  width: 100%;
+  max-width: 480px;
+  background: linear-gradient(135deg, #fff7f7, #ffffff);
+  border: 1px solid #fecaca;
+  border-left: 6px solid var(--primary-red);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 28px 24px;
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.about-card-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  border-radius: 50%;
+  font-size: 1.7rem;
+}
+
+.about-card-header h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.5rem;
+}
+
+.about-commitment {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.about-commitment:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-commitment strong {
+  color: #111827;
+  font-size: 1rem;
+}
+
+.about-commitment span {
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 .about-badge {
@@ -21,10 +84,11 @@
 }
 
 .about-text h2 {
-  font-size: 2.2rem;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
   font-weight: 800;
   margin-bottom: 16px;
   color: #111827;
+  line-height: 1.2;
 }
 
 .about-text p {
@@ -66,6 +130,12 @@
   padding: 32px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vision-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .vision-card h3 {
@@ -126,7 +196,17 @@
 }
 
 @media (max-width: 768px) {
-  .about-intro-grid, .vision-mission-cards {
+  .about-intro-grid,
+  .vision-mission-cards {
     grid-template-columns: 1fr;
+  }
+
+  .about-visual-card {
+    padding: 22px 18px;
+  }
+
+  .about-card-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
