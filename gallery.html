@@ -103,6 +103,39 @@
           <p class="section-desc">Click any photograph to view high-resolution details, medical equipment specifications, and case deployment narratives.</p>
         </div>
 
+        <!-- Live Dispatch Audio Simulation -->
+        <div class="dispatch-audio-sim" id="audioSimBox">
+          <div class="audio-sim-info">
+            <button type="button" class="audio-play-btn" id="audioPlayBtn" aria-label="Play central dispatch transmission">▶</button>
+            <div class="audio-sim-text">
+              <h4><span>📡</span> Central Dispatch Radio Transmission</h4>
+              <p id="audioTranscript">"Central to Unit 4 ALS: Respond Code-3 to West Highway 10. Multi-vehicle incident with trauma."</p>
+            </div>
+          </div>
+          <div class="audio-waveform-box" id="waveformBox">
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+          </div>
+          <span class="audio-status-pill" id="audioStatusPill">Telemetry Ready</span>
+        </div>
+
+        <!-- Controls: Live Search & Counter -->
+        <div class="gallery-controls-bar">
+          <div class="gallery-search-box">
+            <span class="gallery-search-icon">🔍</span>
+            <input type="text" id="gallerySearchInput" class="gallery-search-input" placeholder="Search operations, gear, location (e.g. ICU, helicopter, trauma)..." aria-label="Search gallery">
+          </div>
+          <div class="gallery-results-count" id="galleryResultsCount">
+            Showing 12 of 12 Operational Records
+          </div>
+        </div>
+
         <!-- Filter Buttons -->
         <div class="filter-wrapper">
           <button class="filter-btn active" data-gallery-filter="all">
@@ -632,27 +665,97 @@
   <!-- Person 4 Page Script: Filtering and Lightbox Interaction -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Gallery Filtering
+      // 1. Gallery Filtering & Live Search
       const filterBtns = document.querySelectorAll('.filter-btn');
       const galleryCards = document.querySelectorAll('.gallery-card');
+      const searchInput = document.getElementById('gallerySearchInput');
+      const resultsCount = document.getElementById('galleryResultsCount');
+
+      let currentFilter = 'all';
+      let currentQuery = '';
+
+      function applyFilters() {
+        let count = 0;
+        galleryCards.forEach(card => {
+          const cardCat = card.getAttribute('data-gallery-cat') || '';
+          const cardTitle = (card.getAttribute('data-title') || '').toLowerCase();
+          const cardDesc = (card.getAttribute('data-desc') || '').toLowerCase();
+          const cardLoc = (card.getAttribute('data-location') || '').toLowerCase();
+          const cardGear = (card.getAttribute('data-gear') || '').toLowerCase();
+
+          const matchesCat = (currentFilter === 'all' || cardCat === currentFilter);
+          const matchesSearch = !currentQuery || 
+            cardTitle.includes(currentQuery) || 
+            cardDesc.includes(currentQuery) || 
+            cardLoc.includes(currentQuery) || 
+            cardGear.includes(currentQuery);
+
+          if (matchesCat && matchesSearch) {
+            card.classList.remove('is-hidden');
+            count++;
+          } else {
+            card.classList.add('is-hidden');
+          }
+        });
+
+        if (resultsCount) {
+          resultsCount.textContent = `Showing ${count} of ${galleryCards.length} Operational Records`;
+        }
+      }
 
       filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
           filterBtns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-
-          const filterVal = btn.getAttribute('data-gallery-filter');
-
-          galleryCards.forEach(card => {
-            const cardCat = card.getAttribute('data-gallery-cat');
-            if (filterVal === 'all' || cardCat === filterVal) {
-              card.classList.remove('is-hidden');
-            } else {
-              card.classList.add('is-hidden');
-            }
-          });
+          currentFilter = btn.getAttribute('data-gallery-filter') || 'all';
+          applyFilters();
         });
       });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim().toLowerCase();
+          applyFilters();
+        });
+      }
+
+      // 2. Dispatch Audio Radio Transmission Simulation
+      const audioBox = document.getElementById('audioSimBox');
+      const audioPlayBtn = document.getElementById('audioPlayBtn');
+      const audioStatusPill = document.getElementById('audioStatusPill');
+      const audioTranscript = document.getElementById('audioTranscript');
+
+      const sampleTransmissions = [
+        `"Central to Unit 4 ALS: Respond Code-3 to West Highway 10. Multi-vehicle incident with trauma."`,
+        `"Air Med 1: Weather cleared for mountain extraction at Northern Ridge. Helipad alerted."`,
+        `"Medic 2: STEMI confirmed via telemetry. En route to University Cardiac Catheterization Lab."`,
+        `"Supervisor Interceptor: On scene at Downtown Commerce. Command post established."`
+      ];
+      let transmissionIdx = 0;
+      let isPlayingAudio = false;
+
+      if (audioPlayBtn && audioBox) {
+        audioPlayBtn.addEventListener('click', () => {
+          isPlayingAudio = !isPlayingAudio;
+          if (isPlayingAudio) {
+            audioBox.classList.add('audio-sim-playing');
+            audioPlayBtn.innerHTML = '❚❚';
+            if (audioStatusPill) {
+              audioStatusPill.textContent = 'TRANSMITTING LIVE';
+              audioStatusPill.style.color = '#ef4444';
+            }
+            transmissionIdx = (transmissionIdx + 1) % sampleTransmissions.length;
+            if (audioTranscript) audioTranscript.textContent = sampleTransmissions[transmissionIdx];
+          } else {
+            audioBox.classList.remove('audio-sim-playing');
+            audioPlayBtn.innerHTML = '▶';
+            if (audioStatusPill) {
+              audioStatusPill.textContent = 'STANDBY READY';
+              audioStatusPill.style.color = '#94a3b8';
+            }
+          }
+        });
+      }
 
       // 2. Interactive Lightbox
       const lightboxOverlay = document.getElementById('galleryLightbox');
