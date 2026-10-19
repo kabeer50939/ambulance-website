@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Ambulances | Ambulance Institution</title>
+  <title>Our Ambulances & Fleet | Ambulance Institution</title>
+  <!-- Shared common styles -->
   <link rel="stylesheet" href="css/common.css">
+  <!-- Person 4 styles -->
   <link rel="stylesheet" href="css/ambulances.css">
 </head>
 <body>
@@ -45,91 +47,624 @@
   </header>
 
   <main>
+    <!-- Page Hero Banner -->
     <section class="page-hero">
       <div class="container">
-        <h1>Ambulance Fleet</h1>
-        <p>Advanced medical vehicles engineered for high-speed response, patient stability, and life-critical interventions.</p>
+        <h1>Emergency Ambulance Fleet</h1>
+        <p>State-of-the-art mobile intensive care units, rapid response interceptors, and aeromedical helicopters engineered for rapid triage, critical stabilization, and swift hospital transfer.</p>
         <div class="breadcrumb">
           <a href="index.html">Home</a> &gt; <span>Ambulances</span>
         </div>
       </div>
     </section>
 
+    <!-- Operational Metrics Strip -->
+    <section class="fleet-metrics-strip">
+      <div class="container">
+        <div class="metrics-row">
+          <div class="metric-item">
+            <div class="metric-icon-wrap">🚑</div>
+            <div class="metric-content">
+              <div class="metric-value">45+</div>
+              <div class="metric-label">Active Emergency Units</div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-icon-wrap">⚡</div>
+            <div class="metric-content">
+              <div class="metric-value">&lt; 7 Min</div>
+              <div class="metric-label">Avg Metro Response</div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-icon-wrap">🩺</div>
+            <div class="metric-content">
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Biomedical Certified</div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-icon-wrap">🚁</div>
+            <div class="metric-content">
+              <div class="metric-value">24/7/365</div>
+              <div class="metric-label">Air & Ground Ready</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Fleet Showcase Section -->
     <section class="section-padding">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Modern Fleet</span>
-          <h2 class="section-title">Emergency Vehicles Categorized by Care Level</h2>
-          <p class="section-desc">Each vehicle in our fleet is maintained under strict biomedical inspection protocols with guaranteed backup power.</p>
+          <span class="section-tag">Frontline Fleet</span>
+          <h2 class="section-title">Specialized Vehicles Configured by Care Tier</h2>
+          <p class="section-desc">Every unit in our service is outfitted with certified biomedical gear, redundant oxygen reservoirs, and live telemetry uplinks to regional trauma emergency centers.</p>
         </div>
 
-        <div class="grid-3">
-          <!-- Fleet 1 -->
-          <div class="fleet-card">
-            <div class="fleet-image-placeholder">
-              <span class="fleet-icon">🚑</span>
-              <span>Advanced Life Support (ALS) Unit</span>
+        <!-- Filter Buttons -->
+        <div class="filter-wrapper">
+          <button class="filter-btn active" data-filter="all">
+            <span>All Units</span> <span class="count-badge">7</span>
+          </button>
+          <button class="filter-btn" data-filter="als">
+            <span>Critical Care (ALS)</span> <span class="count-badge">2</span>
+          </button>
+          <button class="filter-btn" data-filter="bls">
+            <span>Basic Support (BLS)</span> <span class="count-badge">2</span>
+          </button>
+          <button class="filter-btn" data-filter="specialized">
+            <span>Pediatric & Bariatric</span> <span class="count-badge">2</span>
+          </button>
+          <button class="filter-btn" data-filter="air">
+            <span>Aeromedical Air</span> <span class="count-badge">1</span>
+          </button>
+        </div>
+
+        <!-- Fleet Grid -->
+        <div class="fleet-grid">
+
+          <!-- Vehicle 1: ALS Mobile ICU -->
+          <div class="fleet-card" data-category="als"
+               data-title="ALS Mobile Intensive Care Unit"
+               data-chassis="Ford F-450 Super Duty 4x4 (Type I Chassis)"
+               data-crew="2 Critical Care Paramedics + 1 Emergency Driver"
+               data-care-tier="Advanced Life Support (Level 1 Mobile ICU)"
+               data-range="480 miles highway / unlimited urban continuous"
+               data-power="3.5kW Pure Sine Medical Inverter + Dual Shorelines"
+               data-eq-1="Zoll X Series 12-Lead Cardiac Monitor & Defibrillator"
+               data-eq-2="Hamilton-T1 Multi-Mode Transport Ventilator (Adult/Peds)"
+               data-eq-3="Triple-Channel Alaris Infusion Syringe Pumps"
+               data-eq-4="Continuous End-Tidal Capnography (EtCO2) & Pulse Oximetry"
+               data-eq-5="Main 3,000L O2 Cylinder + Dual Portable D-Cylinders"
+               data-eq-6="Direct Satellite Cellular 12-Lead Telemetry Uplink">
+            <div class="fleet-visual-container">
+              <div class="fleet-visual-bg-pattern"></div>
+              <div class="fleet-status-pill">
+                <span class="status-dot-live"></span>
+                <span>Active 24/7 Dispatch</span>
+              </div>
+              <div class="fleet-visual-graphic">
+                <span class="fleet-visual-icon">🚑</span>
+                <span class="fleet-vehicle-model">Type I Heavy Duty Platform</span>
+              </div>
             </div>
             <div class="fleet-info">
-              <span class="fleet-badge">Critical Care</span>
-              <h3 class="fleet-title">ALS Mobile ICU</h3>
-              <p class="fleet-desc">Configured for severe trauma, cardiac incidents, and post-operative critical patient transfers.</p>
+              <div class="fleet-badge-row">
+                <span class="fleet-badge badge-als">Critical Care ICU</span>
+                <span class="fleet-dispatch-time">⏱ Fast Deploy</span>
+              </div>
+              <h3 class="fleet-title">ALS Mobile Intensive Care Unit</h3>
+              <p class="fleet-desc">Engineered for acute myocardial infarction, severe multiple trauma, respiratory failure, and hospital-to-hospital ICU transfers.</p>
               <ul class="fleet-specs">
-                <li>• Zoll 12-lead cardiac monitor/defibrillator</li>
-                <li>• Hamilton transport ventilator</li>
-                <li>• Syringe infusion pumps & suction</li>
-                <li>• Pure oxygen supply & backup cylinder</li>
+                <li><span class="spec-bullet">•</span> Zoll X Series 12-Lead monitor, pacing & defibrillator</li>
+                <li><span class="spec-bullet">•</span> Hamilton-T1 ICU transport ventilator system</li>
+                <li><span class="spec-bullet">•</span> Syringe infusion pumps with automated drug library</li>
+                <li><span class="spec-bullet">•</span> High-capacity central oxygen & backup circuits</li>
               </ul>
-              <a href="contact.html" class="btn btn-primary" style="width: 100%;">Inquire / Book ALS</a>
+              <div class="fleet-card-actions">
+                <button type="button" class="btn-spec-details">View Details</button>
+                <a href="contact.html?inquiry=ALS-ICU" class="btn-card-dispatch">Book / Inquire</a>
+              </div>
             </div>
           </div>
 
-          <!-- Fleet 2 -->
-          <div class="fleet-card">
-            <div class="fleet-image-placeholder">
-              <span class="fleet-icon">🚐</span>
-              <span>Basic Life Support (BLS) Unit</span>
+          <!-- Vehicle 2: ALS Urban Response Unit -->
+          <div class="fleet-card" data-category="als"
+               data-title="ALS Urban Response Unit"
+               data-chassis="Chevrolet Express G4500 (Type III Cutaway Body)"
+               data-crew="2 Certified Flight / Senior Paramedics"
+               data-care-tier="Advanced Life Support (Level 2 Pre-Hospital Care)"
+               data-range="420 miles range / GPS Optimized routing"
+               data-power="2.8kW Medical Inverter with Battery Backup"
+               data-eq-1="Physio-Control LIFEPAK 15 Defibrillator / Monitor"
+               data-eq-2="LUCAS 3 Automated Chest Compression Device"
+               data-eq-3="McGrath Video Laryngoscope & Advanced Airway Kit"
+               data-eq-4="EZ-IO Intraosseous Vascular Access Drill"
+               data-eq-5="Automated Suction & Trauma Stabilization Splints"
+               data-eq-6="Integrated ePCR Wireless Tablet & CAD Terminal">
+            <div class="fleet-visual-container">
+              <div class="fleet-visual-bg-pattern"></div>
+              <div class="fleet-status-pill">
+                <span class="status-dot-live"></span>
+                <span>On-Call High Priority</span>
+              </div>
+              <div class="fleet-visual-graphic">
+                <span class="fleet-visual-icon">🚨</span>
+                <span class="fleet-vehicle-model">Type III Aerodynamic Body</span>
+              </div>
             </div>
             <div class="fleet-info">
-              <span class="fleet-badge">Standard Care</span>
-              <h3 class="fleet-title">BLS Response Van</h3>
-              <p class="fleet-desc">Ideal for non-critical emergencies, orthopedic injuries, patient discharge, and hospital transfers.</p>
+              <div class="fleet-badge-row">
+                <span class="fleet-badge badge-als">Advanced Support</span>
+                <span class="fleet-dispatch-time">⏱ Urban Ready</span>
+              </div>
+              <h3 class="fleet-title">ALS Urban Response Unit</h3>
+              <p class="fleet-desc">Agile street ambulance tailored for rapid response in congested metropolitan centers, highway crashes, and acute medical emergencies.</p>
               <ul class="fleet-specs">
-                <li>• Automated External Defibrillator (AED)</li>
-                <li>• Multi-level ergonomic stretcher</li>
-                <li>• Immobilization splints & spine boards</li>
-                <li>• Emergency oxygen delivery system</li>
+                <li><span class="spec-bullet">•</span> LIFEPAK 15 multi-parameter cardiac monitor</li>
+                <li><span class="spec-bullet">•</span> LUCAS 3 mechanical chest compression machine</li>
+                <li><span class="spec-bullet">•</span> Video laryngoscope & difficult airway set</li>
+                <li><span class="spec-bullet">•</span> Emergency trauma intervention & blood warmup pack</li>
               </ul>
-              <a href="contact.html" class="btn btn-primary" style="width: 100%;">Inquire / Book BLS</a>
+              <div class="fleet-card-actions">
+                <button type="button" class="btn-spec-details">View Details</button>
+                <a href="contact.html?inquiry=ALS-Urban" class="btn-card-dispatch">Book / Inquire</a>
+              </div>
             </div>
           </div>
 
-          <!-- Fleet 3 -->
-          <div class="fleet-card">
-            <div class="fleet-image-placeholder">
-              <span class="fleet-icon">🚁</span>
-              <span>Aeromedical Helicopter</span>
+          <!-- Vehicle 3: BLS Patient Transit Van -->
+          <div class="fleet-card" data-category="bls"
+               data-title="BLS Patient Rapid Transport Van"
+               data-chassis="Mercedes-Benz Sprinter 3500 High-Roof (Type II Van)"
+               data-crew="1 Primary Care Paramedic + 1 Certified EMT-Basic"
+               data-care-tier="Basic Life Support (BLS Non-Invasive Stabilization)"
+               data-range="550 miles highway / eco-diesel powertrain"
+               data-power="1.8kW Regulated Medical Power Supply"
+               data-eq-1="Philips HeartStart Automated External Defibrillator (AED)"
+               data-eq-2="Stryker Power-LOAD Powered Cot System (700 lb rating)"
+               data-eq-3="Digital Multi-Parameter Vital Signs Monitor (BP/SpO2/Temp)"
+               data-eq-4="Full Spine Boards, Cervical Collars & Traction Splints"
+               data-eq-5="Continuous Oxygen Therapy Delivery Masks & Cannulas"
+               data-eq-6="Emergency Burn Kits & Hemostatic Bandages">
+            <div class="fleet-visual-container">
+              <div class="fleet-visual-bg-pattern"></div>
+              <div class="fleet-status-pill">
+                <span class="status-dot-live"></span>
+                <span>Active Scheduled</span>
+              </div>
+              <div class="fleet-visual-graphic">
+                <span class="fleet-visual-icon">🚐</span>
+                <span class="fleet-vehicle-model">Type II High-Roof Van</span>
+              </div>
             </div>
             <div class="fleet-info">
-              <span class="fleet-badge">Air Transit</span>
+              <div class="fleet-badge-row">
+                <span class="fleet-badge badge-bls">Basic Support</span>
+                <span class="fleet-dispatch-time">⏱ High Efficiency</span>
+              </div>
+              <h3 class="fleet-title">BLS Patient Rapid Transport</h3>
+              <p class="fleet-desc">Smooth and reliable patient transport for sub-acute injuries, stable hospital transfers, post-surgery discharges, and doctor appointments.</p>
+              <ul class="fleet-specs">
+                <li><span class="spec-bullet">•</span> Stryker Power-LOAD motorized ergonomic cot</li>
+                <li><span class="spec-bullet">•</span> Philips HeartStart AED with pediatric pads</li>
+                <li><span class="spec-bullet">•</span> Vital signs monitoring station with pulse oximetry</li>
+                <li><span class="spec-bullet">•</span> Full fracture splinting and cervical stabilization</li>
+              </ul>
+              <div class="fleet-card-actions">
+                <button type="button" class="btn-spec-details">View Details</button>
+                <a href="contact.html?inquiry=BLS-Transport" class="btn-card-dispatch">Book / Inquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 4: Rapid First Responder Interceptor -->
+          <div class="fleet-card" data-category="bls"
+               data-title="Rapid Response Interceptor SUV"
+               data-chassis="Ford Police Interceptor Utility All-Wheel-Drive"
+               data-crew="1 Emergency Medical Physician or EMS Field Supervisor"
+               data-care-tier="Rapid On-Scene Triage & Early Field Intervention"
+               data-range="450 miles range / All-Weather AWD"
+               data-power="Dual Battery Auxiliary DC Emergency Inverter"
+               data-eq-1="Zoll AED 3 BLS/ALS Automated Defibrillator"
+               data-eq-2="Handheld Point-of-Care Ultrasound (POCUS)"
+               data-eq-3="Mass Casualty Incident (MCI) Triage Command Kit"
+               data-eq-4="Emergency Hemostatic Wound Kits & Tourniquets"
+               data-eq-5="Temperature-Regulated Drug & Blood Storage Vault"
+               data-eq-6="Multi-Agency VHF/UHF Encrypted Satellite Radio">
+            <div class="fleet-visual-container">
+              <div class="fleet-visual-bg-pattern"></div>
+              <div class="fleet-status-pill">
+                <span class="status-dot-live"></span>
+                <span>Sub-5 Min Arrival</span>
+              </div>
+              <div class="fleet-visual-graphic">
+                <span class="fleet-visual-icon">🚔</span>
+                <span class="fleet-vehicle-model">AWD Emergency Command</span>
+              </div>
+            </div>
+            <div class="fleet-info">
+              <div class="fleet-badge-row">
+                <span class="fleet-badge badge-bls">First Responder</span>
+                <span class="fleet-dispatch-time">⏱ Instant Intercept</span>
+              </div>
+              <h3 class="fleet-title">Rapid Response Interceptor</h3>
+              <p class="fleet-desc">Fast-moving supervisory intercept vehicle reaching critical scenes before heavy ambulances to initiate resuscitation and scene triage.</p>
+              <ul class="fleet-specs">
+                <li><span class="spec-bullet">•</span> Handheld emergency ultrasound imaging</li>
+                <li><span class="spec-bullet">•</span> Advanced cardiac defibrillator & drug delivery vault</li>
+                <li><span class="spec-bullet">•</span> Mass Casualty Incident (MCI) triage commander gear</li>
+                <li><span class="spec-bullet">•</span> All-terrain 4x4 traction for foul weather response</li>
+              </ul>
+              <div class="fleet-card-actions">
+                <button type="button" class="btn-spec-details">View Details</button>
+                <a href="contact.html?inquiry=Interceptor-SUV" class="btn-card-dispatch">Book / Inquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 5: Mobile NICU / PICU Carrier -->
+          <div class="fleet-card" data-category="specialized"
+               data-title="Mobile NICU / PICU Pediatric Transport"
+               data-chassis="Freightliner M2 Custom Clinical Suite (Air-Ride)"
+               data-crew="1 Neonatologist / Pediatrician + 1 Neonatal Transport Nurse"
+               data-care-tier="Pediatric & Neonatal Intensive Care Tier 4"
+               data-range="500 miles vibration-damped smooth transit"
+               data-power="Dual Isolated Hospital-Grade Power Inverters"
+               data-eq-1="GE Giraffe OmniBed Temperature-Controlled Transport Incubator"
+               data-eq-2="Dräger Babylog VN500 High-Frequency Infant Ventilator"
+               data-eq-3="Nitric Oxide (iNO) Inhalation Therapy Regulator"
+               data-eq-4="Non-Invasive Transcutaneous Bilirubin & Blood Gas Monitors"
+               data-eq-5="Active Pneumatic Vibration-Isolation Stretcher Deck"
+               data-eq-6="Ambient Fiber-Optic Calming Nursery Lighting Suite">
+            <div class="fleet-visual-container">
+              <div class="fleet-visual-bg-pattern"></div>
+              <div class="fleet-status-pill">
+                <span class="status-dot-live"></span>
+                <span>Sterile Isolation</span>
+              </div>
+              <div class="fleet-visual-graphic">
+                <span class="fleet-visual-icon">👶</span>
+                <span class="fleet-vehicle-model">Air-Suspension Clinical Suite</span>
+              </div>
+            </div>
+            <div class="fleet-info">
+              <div class="fleet-badge-row">
+                <span class="fleet-badge badge-peds">Neonatal & PICU</span>
+                <span class="fleet-dispatch-time">⏱ Specialized Care</span>
+              </div>
+              <h3 class="fleet-title">Mobile NICU / PICU Transport</h3>
+              <p class="fleet-desc">A micro-climate incubator suite specifically dedicated to the fragile transport of premature neonates and critically ill infants.</p>
+              <ul class="fleet-specs">
+                <li><span class="spec-bullet">•</span> GE Giraffe OmniBed sterile incubator system</li>
+                <li><span class="spec-bullet">•</span> High-frequency infant respiratory ventilation</li>
+                <li><span class="spec-bullet">•</span> Active vibration cancellation pneumatic chassis</li>
+                <li><span class="spec-bullet">•</span> Specialized neonatal medication delivery manifold</li>
+              </ul>
+              <div class="fleet-card-actions">
+                <button type="button" class="btn-spec-details">View Details</button>
+                <a href="contact.html?inquiry=NICU-PICU" class="btn-card-dispatch">Book / Inquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 6: Bariatric Heavy-Rescue Transport -->
+          <div class="fleet-card" data-category="specialized"
+               data-title="Bariatric Special Transport Unit"
+               data-chassis="International TerraStar Heavy Medic Chassis"
+               data-crew="3 Certified Heavy-Rescue Paramedics"
+               data-care-tier="High-Mass Patient Transport with Dignity & Comfort"
+               data-range="460 miles heavy load capacity"
+               data-power="3.0kW Heavy Inverter + Hydraulic Auxiliary Power"
+               data-eq-1="Hydraulic Tail-Lift Ramp Rated for 1,000 lbs (450 kg)"
+               data-eq-2="Stryker Bariatric Powered Cot with Widened Support Wings"
+               data-eq-3="HoverJack Air Patient Transfer Mattress & Air Blower"
+               data-eq-4="High-Flow Oxygen & Dual High-Capacity Suction Pumps"
+               data-eq-5="Reinforced Dual-Chassis Pneumatic Leveling System"
+               data-eq-6="Wider Cabin Access Doors & Low Incline Winch System">
+            <div class="fleet-visual-container">
+              <div class="fleet-visual-bg-pattern"></div>
+              <div class="fleet-status-pill">
+                <span class="status-dot-live"></span>
+                <span>Heavy Duty Ready</span>
+              </div>
+              <div class="fleet-visual-graphic">
+                <span class="fleet-visual-icon">🛡️</span>
+                <span class="fleet-vehicle-model">Reinforced Heavy Rescue</span>
+              </div>
+            </div>
+            <div class="fleet-info">
+              <div class="fleet-badge-row">
+                <span class="fleet-badge badge-heavy">Bariatric Care</span>
+                <span class="fleet-dispatch-time">⏱ High Capacity</span>
+              </div>
+              <h3 class="fleet-title">Bariatric Special Transport</h3>
+              <p class="fleet-desc">Designed with specialized hydraulic lifts and reinforced equipment to transport high-mass patients safely, securely, and with utmost dignity.</p>
+              <ul class="fleet-specs">
+                <li><span class="spec-bullet">•</span> 1,000 lb capacity hydraulic tail lift & electric winch</li>
+                <li><span class="spec-bullet">•</span> Widened bariatric motorized cot with memory foam</li>
+                <li><span class="spec-bullet">•</span> HoverJack pneumatic patient slide air cushion</li>
+                <li><span class="spec-bullet">•</span> Reinforced multi-point safety harnesses & restraint</li>
+              </ul>
+              <div class="fleet-card-actions">
+                <button type="button" class="btn-spec-details">View Details</button>
+                <a href="contact.html?inquiry=Bariatric" class="btn-card-dispatch">Book / Inquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 7: Aeromedical Helicopter (Airbus H145) -->
+          <div class="fleet-card" data-category="air"
+               data-title="Air Ambulance Helicopter (Airbus H145)"
+               data-chassis="Airbus H145 Twin-Turbine Rotorcraft (Aeromedical Spec)"
+               data-crew="1 Commercial Flight Pilot + 1 Trauma Doctor + 1 Flight Paramedic"
+               data-care-tier="Critical Care Flight Aeromedical Evacuation"
+               data-range="400 nautical miles / 145 knots cruise speed"
+               data-power="Dual Engine-Driven Generators + Aeromedical AC/DC Bus"
+               data-eq-1="FAA/EASA Flight-Certified Bucher Aeromedical ICU Interior"
+               data-eq-2="Zoll Propaq M Flight-Certified Monitor & Defibrillator"
+               data-eq-3="Hamilton-T1 Military Grade Altitude-Compensating Ventilator"
+               data-eq-4="Liquid Oxygen (LOX) 10-Hour Flight Supply Reservoir"
+               data-eq-5="Night Vision Goggles (NVG) & Helipad Weather Radar"
+               data-eq-6="Direct Satellite Voice & Flight Following Uplink">
+            <div class="fleet-visual-container">
+              <div class="fleet-visual-bg-pattern"></div>
+              <div class="fleet-status-pill">
+                <span class="status-dot-live"></span>
+                <span>Helipad Flight Ready</span>
+              </div>
+              <div class="fleet-visual-graphic">
+                <span class="fleet-visual-icon">🚁</span>
+                <span class="fleet-vehicle-model">Airbus H145 Twin-Turbine</span>
+              </div>
+            </div>
+            <div class="fleet-info">
+              <div class="fleet-badge-row">
+                <span class="fleet-badge badge-air">Air Evacuation</span>
+                <span class="fleet-dispatch-time">⏱ 140 Knots Cruise</span>
+              </div>
               <h3 class="fleet-title">Air Ambulance Chopper</h3>
-              <p class="fleet-desc">For urgent long-distance transfers, remote terrain extractions, and bypass of heavy traffic congestion.</p>
+              <p class="fleet-desc">Rapid airborne evacuation for isolated mountain rescues, regional highway bypasses, and time-critical cardiac, stroke, and organ transports.</p>
               <ul class="fleet-specs">
-                <li>• Dual engine high-speed rotorcraft</li>
-                <li>• Complete airborne ICU suite</li>
-                <li>• Dual flight paramedic & trauma doctor</li>
-                <li>• Real-time satellite flight tracking</li>
+                <li><span class="spec-bullet">•</span> Complete flight-certified ICU intensive care suite</li>
+                <li><span class="spec-bullet">•</span> Night-vision avionics for 24/7 mountain & marine rescue</li>
+                <li><span class="spec-bullet">•</span> Flight trauma surgeon & critical care paramedic crew</li>
+                <li><span class="spec-bullet">•</span> Real-time global satellite flight telemetry</li>
               </ul>
-              <a href="contact.html" class="btn btn-primary" style="width: 100%;">Inquire / Book Air</a>
+              <div class="fleet-card-actions">
+                <button type="button" class="btn-spec-details">View Details</button>
+                <a href="contact.html?inquiry=Air-Ambulance" class="btn-card-dispatch">Book / Inquire</a>
+              </div>
             </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Fleet Comparison Matrix Table -->
+    <section class="section-padding table-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Capability Matrix</span>
+          <h2 class="section-title">Fleet Specifications & Care Level Comparison</h2>
+          <p class="section-desc">Review the technical differences, crew staffing levels, and life-support capacities across our vehicle tiers.</p>
+        </div>
+
+        <div class="table-responsive-wrapper">
+          <table class="fleet-compare-table">
+            <thead>
+              <tr>
+                <th>Vehicle Class</th>
+                <th>Care Tier</th>
+                <th>Crew Compliment</th>
+                <th>Ventilator & Airway</th>
+                <th>Cardiac Monitoring</th>
+                <th>Typical Dispatch</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="vehicle-name-col"><span>🚑</span> ALS Mobile ICU</div></td>
+                <td><span class="fleet-badge badge-als">Tier 1 ICU</span></td>
+                <td>2 Critical Care Paramedics + 1 Driver</td>
+                <td>Hamilton-T1 Multi-Mode Ventilator</td>
+                <td>12-Lead Zoll X Series & Pacing</td>
+                <td>Trauma, Cardiac Arrest, Stroke, ICU transfers</td>
+              </tr>
+              <tr>
+                <td><div class="vehicle-name-col"><span>🚨</span> ALS Urban Unit</div></td>
+                <td><span class="fleet-badge badge-als">Tier 2 ALS</span></td>
+                <td>2 Senior Field Paramedics</td>
+                <td>Video Laryngoscope + Bag Valve</td>
+                <td>LIFEPAK 15 Defib + LUCAS 3</td>
+                <td>Traffic collisions, acute asthma, seizures</td>
+              </tr>
+              <tr>
+                <td><div class="vehicle-name-col"><span>🚐</span> BLS Transit Van</div></td>
+                <td><span class="fleet-badge badge-bls">Tier 3 BLS</span></td>
+                <td>1 Primary Paramedic + 1 EMT-B</td>
+                <td>O2 Therapy, Suction, Pocket Mask</td>
+                <td>Philips HeartStart AED</td>
+                <td>Stable transfers, orthopedic fractures, discharges</td>
+              </tr>
+              <tr>
+                <td><div class="vehicle-name-col"><span>🚔</span> Rapid Interceptor</div></td>
+                <td><span class="fleet-badge badge-bls">First Responder</span></td>
+                <td>1 Trauma Physician / Field Officer</td>
+                <td>Rapid Airway Kit & Portable Suction</td>
+                <td>Zoll AED 3 + POCUS Ultrasound</td>
+                <td>Sub-5 min intercept, scene triage, command</td>
+              </tr>
+              <tr>
+                <td><div class="vehicle-name-col"><span>👶</span> Mobile NICU / PICU</div></td>
+                <td><span class="fleet-badge badge-peds">Tier 4 Pediatric</span></td>
+                <td>Neonatologist + Pediatric ICU Nurse</td>
+                <td>Dräger Babylog Infant Ventilator</td>
+                <td>Transcutaneous Infant Vital Monitors</td>
+                <td>Premature infants, congenital defects, NICU run</td>
+              </tr>
+              <tr>
+                <td><div class="vehicle-name-col"><span>🛡️</span> Bariatric Heavy Unit</div></td>
+                <td><span class="fleet-badge badge-heavy">High Capacity</span></td>
+                <td>3 Heavy Rescue Paramedics</td>
+                <td>High-Flow Continuous O2 Delivery</td>
+                <td>Multi-Lead Vital Signs Monitor</td>
+                <td>Patients up to 1,000 lbs, specialized lift</td>
+              </tr>
+              <tr>
+                <td><div class="vehicle-name-col"><span>🚁</span> Air Ambulance Chopper</div></td>
+                <td><span class="fleet-badge badge-air">Flight ICU</span></td>
+                <td>Flight Surgeon + Critical Paramedic + Pilot</td>
+                <td>Altitude Compensating Hamilton-T1</td>
+                <td>Flight-Certified Zoll Propaq M</td>
+                <td>Remote extraction, multi-system trauma, organs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biomedical Quality & Inspection Standards -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Clinical Quality</span>
+          <h2 class="section-title">Guaranteed Safety & Biomedical Readiness</h2>
+          <p class="section-desc">We leave nothing to chance. Every emergency vehicle undergoes uncompromising clinical inspections before rolling out on duty.</p>
+        </div>
+
+        <div class="standards-grid">
+          <div class="standard-card">
+            <div class="standard-icon-box">📋</div>
+            <h3>32-Point Daily Inspection</h3>
+            <p>Mechanical brakes, steering, sirens, tire pressure, and electrical inverter stability checked every 12-hour shift change.</p>
+          </div>
+          <div class="standard-card">
+            <div class="standard-icon-box">🧼</div>
+            <h3>UV-C Sterilization Bay</h3>
+            <p>Every interior patient bay is scrubbed and exposed to hospital-grade UV-C radiation to eradicate 99.99% of biological pathogens.</p>
+          </div>
+          <div class="standard-card">
+            <div class="standard-icon-box">📡</div>
+            <h3>Satellite ePCR Telemetry</h3>
+            <p>Real-time patient electrocardiograms and oxygenation stats are transmitted directly to receiving surgeons while en route.</p>
+          </div>
+          <div class="standard-card">
+            <div class="standard-icon-box">🏅</div>
+            <h3>CAAS & ISO Accredited</h3>
+            <p>Fully compliant with the Commission on Accreditation of Ambulance Services (CAAS) and ISO 9001 quality healthcare protocols.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Dispatch Callout Banner -->
+    <section class="emergency-banner-section">
+      <div class="container">
+        <div class="emergency-banner-box">
+          <div class="emergency-banner-info">
+            <h2>Need Immediate Medical Dispatch?</h2>
+            <p>Our centralized dispatch hub operates 24 hours a day, 7 days a week. For life-threatening emergencies, call our priority hotline immediately.</p>
+          </div>
+          <div class="emergency-banner-actions">
+            <a href="tel:8005550199" class="btn-white-solid">📞 (800) 555-0199</a>
+            <a href="contact.html" class="btn-white-outline">Schedule Non-Emergency</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Interactive Vehicle Specification Modal -->
+  <div class="modal-overlay" id="specModalOverlay" aria-hidden="true" role="dialog">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="modalTitle">Vehicle Specifications</h3>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-spec-grid">
+          <div class="modal-spec-item">
+            <span class="label">Vehicle Platform</span>
+            <span class="val" id="modalChassis">-</span>
+          </div>
+          <div class="modal-spec-item">
+            <span class="label">Clinical Care Rating</span>
+            <span class="val" id="modalCareTier">-</span>
+          </div>
+          <div class="modal-spec-item">
+            <span class="label">Crew Configuration</span>
+            <span class="val" id="modalCrew">-</span>
+          </div>
+          <div class="modal-spec-item">
+            <span class="label">Operational Range</span>
+            <span class="val" id="modalRange">-</span>
+          </div>
+          <div class="modal-spec-item">
+            <span class="label">Biomedical Power System</span>
+            <span class="val" id="modalPower">-</span>
+          </div>
+          <div class="modal-spec-item">
+            <span class="label">Dispatch Telematics</span>
+            <span class="val">Live CAD / GPS Fleet Telemetry</span>
+          </div>
+        </div>
+
+        <div class="modal-equipment-section">
+          <h4>Certified Onboard Medical Equipment</h4>
+          <ul class="modal-equipment-list" id="modalEquipmentList">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="modalFooterClose">Close</button>
+        <a href="contact.html" class="btn btn-primary" id="modalBookingBtn">Dispatch Inquiry</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Footer -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Ambulance Institution</h4>
+          <p>Dedicated to delivering fast, compassionate, and life-saving pre-hospital medical care across all metropolitan and regional districts.</p>
+          <div class="footer-emergency-box">
+            <span>24/7 Central Dispatch Helpline:</span>
+            <span class="phone">(800) 555-0199</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Emergency Response</a></li>
+            <li><a href="ambulances.html">Ambulance Fleet</a></li>
+            <li><a href="facilities.html">Medical Facilities</a></li>
+            <li><a href="contact.html">Patient Transfer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Headquarters</h4>
+          <p>📍 742 Evergreen Healthcare Ave, Medical District, Suite 100</p>
+          <p>📧 dispatch@ambulanceinstitution.org</p>
+          <p>⏰ Open 24 Hours / 7 Days a Week / 365 Days a Year</p>
+        </div>
+      </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Ambulance Institution. All rights reserved.</p>
         <p>Built with ❤️ by Group 5 Team</p>
@@ -137,6 +672,102 @@
     </div>
   </footer>
 
+  <!-- Shared JS -->
   <script src="js/main.js"></script>
+
+  <!-- Person 4 Page Script: Filtering and Modal Interaction -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Fleet Category Filtering
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const fleetCards = document.querySelectorAll('.fleet-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filterVal = btn.getAttribute('data-filter');
+
+          fleetCards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (filterVal === 'all' || cardCat === filterVal) {
+              card.classList.remove('is-hidden');
+            } else {
+              card.classList.add('is-hidden');
+            }
+          });
+        });
+      });
+
+      // 2. Fleet Specification Modal
+      const modalOverlay = document.getElementById('specModalOverlay');
+      const closeBtn = document.getElementById('modalCloseBtn');
+      const footerCloseBtn = document.getElementById('modalFooterClose');
+      const specButtons = document.querySelectorAll('.btn-spec-details');
+
+      const modalTitle = document.getElementById('modalTitle');
+      const modalChassis = document.getElementById('modalChassis');
+      const modalCareTier = document.getElementById('modalCareTier');
+      const modalCrew = document.getElementById('modalCrew');
+      const modalRange = document.getElementById('modalRange');
+      const modalPower = document.getElementById('modalPower');
+      const modalEqList = document.getElementById('modalEquipmentList');
+      const modalBookingBtn = document.getElementById('modalBookingBtn');
+
+      function openModal(card) {
+        modalTitle.textContent = card.getAttribute('data-title') || 'Vehicle Specification';
+        modalChassis.textContent = card.getAttribute('data-chassis') || '-';
+        modalCareTier.textContent = card.getAttribute('data-care-tier') || '-';
+        modalCrew.textContent = card.getAttribute('data-crew') || '-';
+        modalRange.textContent = card.getAttribute('data-range') || '-';
+        modalPower.textContent = card.getAttribute('data-power') || '-';
+
+        // Populate equipment
+        modalEqList.innerHTML = '';
+        for (let i = 1; i <= 6; i++) {
+          const eqItem = card.getAttribute(`data-eq-${i}`);
+          if (eqItem) {
+            const li = document.createElement('li');
+            li.textContent = eqItem;
+            modalEqList.appendChild(li);
+          }
+        }
+
+        const title = card.getAttribute('data-title');
+        modalBookingBtn.href = `contact.html?inquiry=${encodeURIComponent(title)}`;
+
+        modalOverlay.classList.add('is-active');
+        modalOverlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modalOverlay.classList.remove('is-active');
+        modalOverlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      specButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const card = e.target.closest('.fleet-card');
+          if (card) openModal(card);
+        });
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (footerCloseBtn) footerCloseBtn.addEventListener('click', closeModal);
+
+      modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) closeModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('is-active')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
