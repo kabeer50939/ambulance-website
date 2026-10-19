@@ -1340,3 +1340,31 @@
   }
 }
 
+
+/* Empty Gallery State */
+.gallery-empty-state {
+  text-align: center;
+  padding: 64px 24px;
+  background: #ffffff;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gallery-empty-state .empty-state-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+
+.gallery-empty-state h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.gallery-empty-state p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
